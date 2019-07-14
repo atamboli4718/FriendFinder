@@ -7,9 +7,9 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style> body {background-color: pink;} </style>
 
 </head>
 
@@ -21,28 +21,15 @@
             <hr>
             <h3>Find your best match!</h3>
             <a href="/quiz"><button class="btn btn-secondary btn-lg" id="quizButton"><span class="fa fa-credit-card">
-                </span>Take thequiz</button></a>
+                    </span>Take thequiz</button></a>
         </div>
     </div>
 </body>
 
 <script type="text/javascript">
-    // Question: What does this code do?
-    $("#quizButton").on("click", function(event) {
-      event.preventDefault();
-      var newCharacter = {
-        name: $("#name").val().trim(),
-        role: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
-      };
-
-      // Question: What does this code do??
-      $.post("/api/characters", newCharacter)
-        .then(function(data) {
-          console.log("add.html", data);
-          alert("Adding character...");
-        });
+    $("#quizButton").on("click", function (event) {
+        event.preventDefault();
+        $.get("/survey");
     });
 </script>
 
