@@ -20,10 +20,30 @@
             <h1><span class="fa fa-heart"></span> Love Finder</h1>
             <hr>
             <h3>Find your best match!</h3>
-            <a href="/quiz"><button class="btn btn-secondary btn-lg"><span class="fa fa-credit-card">
+            <a href="/quiz"><button class="btn btn-secondary btn-lg" id="quizButton"><span class="fa fa-credit-card">
                 </span>Take thequiz</button></a>
         </div>
     </div>
 </body>
+
+<script type="text/javascript">
+    // Question: What does this code do?
+    $("#quizButton").on("click", function(event) {
+      event.preventDefault();
+      var newCharacter = {
+        name: $("#name").val().trim(),
+        role: $("#role").val().trim(),
+        age: $("#age").val().trim(),
+        forcePoints: $("#force-points").val().trim()
+      };
+
+      // Question: What does this code do??
+      $.post("/api/characters", newCharacter)
+        .then(function(data) {
+          console.log("add.html", data);
+          alert("Adding character...");
+        });
+    });
+</script>
 
 </html>
