@@ -25,7 +25,7 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var friends = [
+var dates = [
     {
     "name":"Amber",
     "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
@@ -44,6 +44,15 @@ var friends = [
     }
   ];
 
+// Routes
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname + '/../public/', "home.html"));
+  });
+
+app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname + '/../public/', "survey.html"));
+  });
 
 
 
