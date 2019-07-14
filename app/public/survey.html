@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Love Finder</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+  <div class="jumbotron">
+  <div class="text-center">
+  <h1><span class="fa fa-heart"></span>Love Match Quiz</h1>
+  <hr>
+  <h5 class="font-italic">All fields are required</h5>
+  </div>
+
+  <form>
+  <h3>About You</h3>
+  <div class="form-group">
+  <label for="name">Name</label>
+  <input type="name" class="form-control" id="name" aria-describedby="YourName"
+  placeholder="Your Name">
+  </div>
+  <div class="form-group">
+  <label for="pic">Picture</label>
+  <input type="pic" class="form-control" id="pic" aria-describedby="Pic"
+  placeholder="Link to a picture of you">
+  <br>
+  <small id="noShare" class="form-text text-muted text-center font-italic">We'll never share your information anyone
+  else. For the questions below, 1 is strongly disagree and 5 is strongly agree.</small>
+  </div>
+
+  <div id="survey">
+
+    <!-- Question1 -->
+  <label for="Q1">I believe in love at first sight.</label> <br>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+    value="option1">
+    <label class="form-check-label" for="inlineRadio1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+    value="option2">
+    <label class="form-check-label" for="inlineRadio2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+    value="option3">
+    <label class="form-check-label" for="inlineRadio3">3</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+    value="option4">
+    <label class="form-check-label" for="inlineRadio4">4</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+    value="option5">
+    <label class="form-check-label" for="inlineRadio5">5</label>
+  </div><br>
+  <br>
+
+      <!-- Question2 -->
+  <label for="Q2">You'll find me home enjoying the quiet on the weekends.</label> <br>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+    value="option1">
+    <label class="form-check-label" for="inlineRadio1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+    value="option2">
+    <label class="form-check-label" for="inlineRadio2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+    value="option3">
+    <label class="form-check-label" for="inlineRadio3">3</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+    value="option4">
+    <label class="form-check-label" for="inlineRadio4">4</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+    value="option5">
+    <label class="form-check-label" for="inlineRadio5">5</label>
+  </div><br>
+  <br>
+
+   </div> 
+   <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+  </form>
+  </div>
+
+</body>
+
+</html>
+
+<!-- 
+10 Questions:
+1-5, 1 strongly disagree & 5 strongly agree
++ You'll find me home enjoying the quiet on the weekends.
++ I believe in love at first sight.
+- Working out is an important part of my routine.
+- I prefer being in the outdoors for my leisure activities.
+- I love to sleep in the weekends.
+- My work is a very important part of my life.
+- Music helps me to relax.
+- I prefer making a homecooked meal to going out.
+- When I go out, I am the life of the party.
+- I prefer going to tried and true vacation locations over risking it on a new place.
+-->
