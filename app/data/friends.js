@@ -54,7 +54,22 @@ app.get("/survey", function(req, res) {
     res.sendFile(path.join(__dirname + '/../public/', "survey.html"));
   });
 
-
+// Creates New Dates - takes in JSON input
+app.post("/api/surveyRes", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var newDate = req.body;
+  
+    // Using a RegEx Pattern to remove spaces from newCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    newDate.routeName = newDate.name.replace(/\s+/g, "").toLowerCase();
+  
+    console.log(newDate);
+  
+    characters.push(newDate);
+  
+    res.json(newDate);
+  });
 
 
 // Starts the server to begin listening
@@ -62,3 +77,5 @@ app.get("/survey", function(req, res) {
 app.listen(PORT, function() {
     console.log("App listening");
 });
+
+ 

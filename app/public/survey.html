@@ -334,7 +334,7 @@
     <br>
 
    </div> 
-   <button type="submit" class="btn btn-secondary">Submit</button>
+   <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button>
 </div>
 </form>
 </div>
@@ -342,6 +342,44 @@
 </body>
 
 </html>
+
+
+<script type="text/javascript">
+    $("#submitBtn").on("click", function(event) {
+      event.preventDefault();
+      var newDate = {
+        "name": $("#name").val().trim(),
+        "pic": $("#pic").val().trim(),
+        "scores":[
+        inlineRadio5-1,
+        inlineRadio5-2,
+        inlineRadio5-3,
+        inlineRadio5-4,
+        inlineRadio5-5,
+        inlineRadio5-6,
+        inlineRadio5-7,
+        inlineRadio5-8,
+        inlineRadio5-9,
+        inlineRadio5-10
+        ]
+      };
+
+      
+      $.post("/api/surveyRes", newDate)
+        .then(function(data) {
+          console.log("New Date submitted!");
+          console.log(newDate);
+            //console.log("add.html", data);
+        });
+    });
+  </script>
+
+
+
+
+
+
+
 
 <!-- 
 10 Questions:
