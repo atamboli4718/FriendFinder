@@ -54,6 +54,13 @@ app.get("/survey", function(req, res) {
     res.sendFile(path.join(__dirname + '/../public/', "survey.html"));
   });
 
+app.get("/api/surveyRes", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  // This works because of our body parsing middleware
+  console.log(dates);
+  res.json(dates);
+});  
+
 // Creates New Dates - takes in JSON input
 app.post("/api/surveyRes", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
