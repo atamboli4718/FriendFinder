@@ -1,19 +1,4 @@
-/*
-10 Questions:
-1-5, 1 strongly disagree & 5 strongly agree
-- You'll find me home enjoying the quiet on the weekends.
-- I believe in love at first sight.
-- Working out is an important part of my routine.
-- I prefer being in the outdoors for my leisure activities.
-- I love to sleep in the weekends.
-- My work is a very important part of my life.
-- Music helps me to relax.
-- I prefer making a homecooked meal to going out.
-- When I go out, I am the life of the party.
-- I prefer going to tried and true vacation locations over risking it on a new place.
-*/
-
-
+// Dependencies
 var express = require("express");
 var path = require("path");
 
@@ -27,8 +12,8 @@ app.use(express.json());
 
 var dates = [
     {
-    "name":"Amber",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Seth Rogen",
+    "photo":"https://www.thewrap.com/wp-content/uploads/2016/04/Seth-Rogen-Pineapple-Express.jpg",
     "scores":[
         5,
         1,
@@ -41,7 +26,56 @@ var dates = [
         4,
         1
         ]
+    },
+    {
+    "name":"Chris Farley",
+    "photo":"https://milwaukeerecord.com/wp-content/uploads/2018/01/TommyBoyScreening.jpg",
+    "scores":[
+        5,
+        1,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+        ]
+    },
+    {
+    "name":"Aziz Ansari",
+    "photo":"https://cimg.tvgcdn.net/i/r/2019/07/09/d2fe2aa3-c777-45f3-90ce-ec1b372adf82/resize/1800x1200/1afcdc8c77ffeb734d7f30213b5e4f01/aziz-ansari-reg.jpg",
+    "scores":[
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+        ]
+    },
+    {
+    "name":"Amy Schumer",
+    "photo":"https://img.thedailybeast.com/image/upload/v1552695641/190317-fallon-AmySchumer-Growing-embed-2_zrgfes.jpg",
+    "scores":[
+        1,
+        2,
+        3,
+        4,
+        5,
+        5,
+        4,
+        3,
+        2,
+        1
+        ]
     }
+
   ];
 
 // Routes
