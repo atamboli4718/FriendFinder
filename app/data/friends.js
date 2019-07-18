@@ -79,3 +79,33 @@ app.listen(PORT, function() {
 });
 
  
+var matchIndex=0;
+var matchScore;
+
+function compare (){
+    var diffVar;
+    for (var i=0;i<dates.length; i++){
+        console.log('in1: ' + i);
+        diffVar=0;
+        console.log("dates[i].scores = "+dates[i].scores)
+        for(var j=0;j<dates[i].scores.length; j++){
+            console.log("in2: " + j);
+            var tempDif=Math.abs(dates[i].scores[j]-newDate.scores[j]);
+            diffVar=diffVar+tempDif
+            console.log("diffVar:" + diffVar);
+        }
+        if(i==0){
+            matchScore=diffVar;
+            console.log("matchScore: "+matchScore);
+            console.log("matchIndex: "+matchIndex);
+        }else if (diffVar<matchScore){
+            matchScore=diffVar;
+            matchIndex=i;
+            console.log("matchScore: "+ matchScore);
+            console.log("matchIndex: "+matchIndex);
+        }
+    }
+    console.log("Final matchScore: "+ matchScore);
+    console.log("Final matchIndex: "+matchIndex);
+}
+
