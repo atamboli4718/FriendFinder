@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Love Finder</title>
+  <title>Friend Finder</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../data/friends.js"></script>
-  <style> body {background-color: pink;} </style> 
+  <style> body {background-color: #9EE5EA;} </style> 
 
 </head>
 
@@ -19,7 +19,7 @@
   <div class="container mt-5">
   <div class="jumbotron">
   <div class="text-center">
-  <h1><span class="fa fa-heart"></span> Love Match Quiz</h1>
+  <h1><span class="fa fa-child"></span> Friend Finder Quiz</h1>
   <hr>
   <h5 class="font-italic">All fields are required</h5>
   </div>
@@ -43,7 +43,7 @@
   <div id="survey">
 
     <!-- Question1 -->
-  <label for="Q1">I believe in love at first sight.</label> <br>
+  <label for="Q1">I believe friends are forever.</label> <br>
   <div class="form-group">
   <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1-1"
@@ -334,9 +334,16 @@
     <br>
 
    </div> 
-   <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button>
+   <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button> 
+   <br><br>
+   <div id="showHide" class="text-center" style="display:none;">
+    <h4>Your new friend is....</h4>
+    <h5>Name: </h5><h5 id="matchName"></h5>
+    <h5>Picture: </h5><h5 id="matchPic"></h5>
+    </div>
 </div>
 </form>
+
 </div>
 
 </body>
@@ -451,6 +458,7 @@
            console.log("New potential Date submitted!");
         });
         compare (newDate);
+        showDiv();
     });   
 
     var dates = [
@@ -520,6 +528,10 @@
         }
 
     ];
+    
+    function showDiv() {
+        document.getElementById('showHide').style.display = "block";
+    }
 
     var matchIndex=0;
     var matchScore;
