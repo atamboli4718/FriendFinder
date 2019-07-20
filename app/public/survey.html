@@ -338,8 +338,8 @@
    <br><br>
    <div id="showHide" class="text-center" style="display:none;">
     <h4>Your new friend is....</h4>
-    <h5>Name: </h5><h5 id="matchName"></h5>
-    <h5>Picture: </h5><h5 id="matchPic"></h5>
+    <h5 id="matchName"></h5>
+    <img id="matchPic" src="https://www.essence.com/wp-content/uploads/2017/04/1492023603/GettyImages-130032215_master.jpg" alt="match image not found" class="img-responsive rounded" height="200">
     </div>
 </div>
 </form>
@@ -457,7 +457,7 @@
          .then(function(data) {
            console.log("New potential Date submitted!");
         });
-        compare (newDate);
+        compare (newDate,dates);
         showDiv();
     });   
 
@@ -536,7 +536,7 @@
     var matchIndex=0;
     var matchScore;
 
-    function compare (newDate){
+    function compare (newDate,dates){
         var diffVar;
         for (var i=0;i<dates.length; i++){
             console.log('in1: ' + i);
@@ -561,6 +561,8 @@
         }
         console.log("Final matchScore: "+ matchScore);
         console.log("Final matchIndex: "+matchIndex);
+        document.getElementById("matchName").innerHTML = dates[matchIndex].name;
+        document.getElementById("matchPic").src = dates[matchIndex].photo;
     }
   
 
